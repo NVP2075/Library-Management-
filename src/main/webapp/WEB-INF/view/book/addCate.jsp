@@ -32,7 +32,7 @@
     </div>
     <div class="form-group">
       <label>Mô tả</label>
-      <input type="text" name="des" required placeholder="Mô tả cho thể loại..."/>	
+      <input type="text" name="des" required placeholder="Mô tả..."/>	
     </div>
     <div class="actions">
       <button type="submit" class="btn btn-primary">Lưu</button>

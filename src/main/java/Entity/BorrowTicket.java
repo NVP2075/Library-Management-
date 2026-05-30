@@ -85,9 +85,10 @@ public class BorrowTicket {
 	public void setBorrow_ticket_detail_list(List<BorrowTicketDetail> borrow_ticket_detail_list) {
 		this.borrow_ticket_detail_list = borrow_ticket_detail_list;
 	}
-	public boolean overDue() {
+	public boolean overDue(BorrowTicketDetail btd) {
 		Date today = new Date();
-		if(today.getTime() - this.borrow_date.getTime() > 10L * 24 * 60 * 60 * 1000)
+		
+		if(today.after(btd.getDue_date()))
 			return true;
 		return false;
 	}

@@ -73,6 +73,13 @@ public class BorrowTicketDetail {
 	public void setStatus(String status) {
 		this.status = status;
 	}
+	public boolean overDue() {
+		Date today = new Date();
+		
+		if(today.after(due_date))
+			return true;
+		return false;
+	}
 	@Override
 	public String toString() {
 		return "borrow_ticket_details [ticket_id=" + ticket_id + ", book_copy=" + book_copy + ", due_date=" + due_date

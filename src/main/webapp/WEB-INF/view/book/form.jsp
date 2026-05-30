@@ -45,6 +45,7 @@
       <label>Thể Loại</label>
       	<div class="checkbox-group">
       	<select name="categoryId">
+      		<option>--Chọn thể loại--</option>
       		<c:forEach items="${listCate}" var="lc">
           		<option value="${lc.id }">${lc.name }</option>
         	</c:forEach>
@@ -58,6 +59,7 @@
       <label>Tác Giả</label>
       <div class="checkbox-group">
       	<select name="authorIds">
+      		<option>--Chọn tác giả--</option>
       		<c:forEach items="${authors}" var="a">
           		<option value="${a.id }">${a.name }</option>
         	</c:forEach>

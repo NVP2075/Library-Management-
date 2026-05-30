@@ -73,7 +73,7 @@
 		            <td>
 		              <c:choose>
 		                <c:when test="${l.status == 'RETURNED'}"><span class="badge badge-success">Đã Trả</span></c:when>
-		                <c:when test="${l.overDue()}"><span class="badge badge-danger">Quá Hạn</span></c:when>
+		                <c:when test="${btdl.overDue() }"><span class="badge badge-danger">Quá Hạn</span></c:when>
 		                <c:otherwise><span class="badge badge-warning">Đang Mượn</span></c:otherwise>
 		              </c:choose>
 		            </td>
