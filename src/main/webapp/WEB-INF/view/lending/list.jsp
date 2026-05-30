@@ -58,7 +58,7 @@
 		          <fmt:formatDate value="${l.borrow_date}" pattern="dd/MM/yyyy" var="created"/>
 		          <fmt:formatDate value="${btdl.due_date}"      pattern="dd/MM/yyyy" var="due"/>
 		          <fmt:formatDate value="${btdl.return_date}"   pattern="dd/MM/yyyy" var="returned"/>
-		          <tr align="center" class="${l.overDue() ? 'overdue-row' : ''}">
+		          <tr align="center" class="${l.overDue(btdl) ? 'overdue-row' : ''}">
 		            <td>${l.id}</td>
 		            <td>${btdl.book_copy.id}</td>
 		            <td>${btdl.book_copy.book.title}</td>
@@ -66,7 +66,7 @@
 		            <td>${l.reader.name}</td>
 		            <td>${created}</td>
 		            <td><c:choose>
-		              <c:when test="${l.overDue()}"><strong style="color:#c0392b">${due}</strong></c:when>
+		              <c:when test="${btdl.overDue()}"><strong style="color:#c0392b">${due}</strong></c:when>
 		              <c:otherwise>${due}</c:otherwise>
 		            </c:choose></td>
 		            <td>${empty returned ? '-' : returned}</td>

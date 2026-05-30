@@ -40,7 +40,7 @@ public class BorrowingBookService {
         List<BorrowTicket> list = new ArrayList<>();
         try {
             list = em.createQuery(
-                "from BorrowTicket bt order by bt.borrow_date desc",
+                "from BorrowTicket bt order by bt.id asc",
                 BorrowTicket.class).getResultList();
         } catch (Exception e) {
             e.printStackTrace();
