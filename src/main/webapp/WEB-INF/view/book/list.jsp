@@ -43,7 +43,7 @@
     </form>
     <form action="BookServlet" method="get">
       <input type="hidden" name="action" value="list"/>
-      <input type="text" name="subject" placeholder="Tìm theo chủ đề..." value="${subject}"/>
+      <input type="text" name="subject" placeholder="Tìm theo thể loại..." value="${subject}"/>
       <button type="submit" class="btn btn-info">Lọc</button>
     </form>
     <a href="BookServlet?action=list" class="btn btn-info">Tất Cả</a>

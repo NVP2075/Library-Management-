@@ -86,7 +86,7 @@ public class BookService {
         List<Book> list = new ArrayList<>();
         try {
             TypedQuery<Book> q = em.createQuery(
-                "from Book b where lower(b.subject) like :kw", Book.class);
+                "from Book b where lower(b.cate.name) like :kw", Book.class);
             q.setParameter("kw", "%" + subject.toLowerCase() + "%");
             list = q.getResultList();
         } catch (Exception e) {
