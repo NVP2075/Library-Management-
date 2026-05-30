@@ -35,7 +35,7 @@
     </c:when>
     <c:otherwise>
       <table>
-        <tr><th>ID</th><th>Họ Tên</th><th>Thông Tin</th></tr>
+        <tr><th>ID</th><th>Họ Tên</th><th>Thông Tin Tác Giả</th></tr>
         <c:forEach items="${authors}" var="a">
           <tr>
             <td>${a.id}</td>
