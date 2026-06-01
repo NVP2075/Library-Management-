@@ -197,7 +197,8 @@ public class BorrowingBookService {
 
             Date today = new Date();
                         
-            BorrowTicketDetail btd = em.createQuery("SELECT d FROM BorrowTicketDetail d WHERE d.ticket_id.id = :bId", BorrowTicketDetail.class)
+            BorrowTicketDetail btd = em.createQuery("SELECT d FROM BorrowTicketDetail d WHERE d.ticket_id.id = :bId", 
+            		BorrowTicketDetail.class)
                     .setParameter("bId", borrowId)
                     .setMaxResults(1) 
                     .getSingleResult();
@@ -220,9 +221,6 @@ public class BorrowingBookService {
             Reader reader = borrow.getReader();
             int current = reader.getTotalBookBorrowed();
             reader.setTotalBookBorrowed(Math.max(0, current - 1));
-
-            
-
             em.getTransaction().commit();
         } catch (Exception e) {
             em.getTransaction().rollback();

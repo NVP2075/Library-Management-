@@ -28,10 +28,7 @@ public class AuthorService {
 			em.getTransaction().begin();
 			em.persist(author);
 			em.getTransaction().commit();
-			/*if(authorList.contains(author) && em.getTransaction().isActive()) {
-				em.getTransaction().rollback();
-				em.close();
-			}*/
+		
 		} catch (Exception e) {
 			// TODO: handle exception
 			em.getTransaction().rollback();
