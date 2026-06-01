@@ -30,7 +30,7 @@ public class OverdueCheckTask implements Runnable {
         	em.getTransaction().commit();
 
         	if (detailCount > 0 || ticketCount > 0) {
-        	    System.out.println("[Scheduler] Đã tự động cập nhật " + detailCount + " cuốn sách và " + ticketCount + " phiếu mượn sang Quá Hạn.");
+        	    System.out.println("[Scheduler] Đã tự động cập nhật " + detailCount + " cuốn sách và " + ticketCount + " phiếu mượn sang OVERDUE.");
         	}
         } catch (Exception e) {
             em.getTransaction().rollback();
